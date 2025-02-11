@@ -1,4 +1,5 @@
 import { Grid, useBreakpointValue, GridItem } from "@chakra-ui/react";
+import NavBar from "./components/NavBar";
 
 export default function App() {
   const isHidden = useBreakpointValue({ base: true, lg: false });
@@ -10,7 +11,7 @@ export default function App() {
       }}
     >
       <GridItem area={"nav"} bg={"white"} color={"black"}>
-        Navigation Bar
+        <NavBar />
       </GridItem>
       {!isHidden && (
         <GridItem area={"aside"} bg={"yellow"} color={"black"}>
