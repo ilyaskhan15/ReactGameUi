@@ -10,17 +10,11 @@ export default function App() {
         lg: `"nav nav" "aside main"`,
       }}
     >
-      <GridItem area={"nav"} bg={"white"} color={"black"}>
+      <GridItem area={"nav"} color={"white"}>
         <NavBar />
       </GridItem>
-      {!isHidden && (
-        <GridItem area={"aside"} bg={"yellow"} color={"black"}>
-          Aside Pannel
-        </GridItem>
-      )}
-      <GridItem area={"main"} bg={"blue"} color={"black"}>
-        Main Area
-      </GridItem>
+      {!isHidden && <GridItem area={"aside"}>Aside Pannel</GridItem>}
+      <GridItem area={"main"}>Main Area</GridItem>
     </Grid>
   );
 }
